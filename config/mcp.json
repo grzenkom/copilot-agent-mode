@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "mcp-gitlab": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@zereight/mcp-gitlab"],
+      "env": {
+        // make sure you have a variable named GITLAB_PERSONAL_ACCESS_TOKEN set in your environment
+        "GITLAB_API_URL": "https://code.roche.com/api/v4",
+        "GITLAB_READ_ONLY_MODE": "true"
+      }
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}
